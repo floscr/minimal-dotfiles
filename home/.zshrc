@@ -4,7 +4,7 @@
 # -----------------------------------------------------------------------------
 
 export PATH="~/bin:$PATH"
-export ZSH=$USER/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # -----------------------------------------------------------------------------
 # ZSH Settings
@@ -18,7 +18,7 @@ compinit
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
-ZSH_THEME=avit
+ZSH_THEME=robbyrussell
 
 # Enable VI mode
 set -o vi
@@ -74,3 +74,13 @@ setopt complete_in_word # Allow completion from within a word/phrase
 # PROMPT
 setopt prompt_subst # Enable parameter expansion, command substitution, and arithmetic expansion in the prompt
 unsetopt correct_all
+
+# -----------------------------------------------------------------------------
+# Import files
+# -----------------------------------------------------------------------------
+
+if [ -f $HOME/.zsh_profile ]; then
+  source $HOME/.zsh_profile
+fi
+
+source $HOME/.aliases
