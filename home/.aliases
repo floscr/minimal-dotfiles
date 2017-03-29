@@ -1,0 +1,10 @@
+# -----------------------------------------------------------------------------
+# GIT Alias
+# -----------------------------------------------------------------------------
+
+alias gs="git status"
+alias ga="git add ."
+alias ga="git commit -am"
+alias gl="git log --oneline --graph --all --decorate"
+alias pull="git pull"
+alias push="git push"
