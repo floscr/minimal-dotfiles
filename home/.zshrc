@@ -4,6 +4,7 @@
 # -----------------------------------------------------------------------------
 
 export PATH="~/bin:$PATH"
+export ZSH=$USER/.oh-my-zsh
 
 # -----------------------------------------------------------------------------
 # ZSH Settings
@@ -17,10 +18,12 @@ compinit
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
-ZSH_THEME=robbyrussell
+ZSH_THEME=avit
 
 # Enable VI mode
 set -o vi
+
+plugins=(git)
 
 # Turn off auto update
 # http://stackoverflow.com/questions/11378607/oh-my-zsh-disable-would-you-like-to-check-for-updates-prompt
@@ -28,6 +31,8 @@ DISABLE_AUTO_UPDATE=true
 
 # show completion menu when number of options is at least 2
 zstyle ':completion:*' menu select=2
+
+source $ZSH/oh-my-zsh.sh
 
 # -----------------------------------------------------------------------------
 # Shell Settings
